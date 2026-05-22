@@ -11,18 +11,16 @@ Perfect voor:
 - Wegwijs worden in GitHub
 - Het leren structureren van data
 
-> `I will not have you in my class if you continue to be a babbling, bumbling band of baboons who can't even SORT their data!`
+> `kaas is lekker`
 
 ## 📁 Inhoud/structuur
 
-- `data/raw/` –
-- `data/processed` - 
-- `scripts/` – 
-- `resultaten/` - 
-- `bronnen/` - gebruikte bronnen 
-- `README.md` - 
-- `assets/` - overige documenten voor de opmaak van deze pagina
-- `data_stewardship/` - Voor de competentie beheren ga je aantonen dat je projectgegevens kunt beheren met behulp van GitHub. In deze folder kan je hulpvragen terugvinden om je op gang te helpen met de uitleg van data stewardship. 
+- `Ruwe data` –Dit is de map met alle Ruwe data behalve het menselijk genoom (die staat in bronnen)
+- `verwerkte data` - Hierin staat alle verwerkte data
+- `Code` – Hier staat de code geschreven in R
+- `bronnen` - deze map is voor de gebruikte bronnen 
+- `figuren` - Alle gemaakte figuren staan hierin
+- `databeheer` - Deze is voor meer uitleg over deze github pagina
 
 ---
 
