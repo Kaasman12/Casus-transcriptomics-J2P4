@@ -16,12 +16,10 @@ Perfect voor:
 ## 📁 Inhoud/structuur
 
 - `Ruwe data` –Dit is de map met alle Ruwe data behalve het menselijk genoom (die staat in bronnen)
-- `verwerkte data` - Hierin staat alle verwerkte data
+- `Verwerkte data` - Hierin staat alle verwerkte data
 - `Code` – Hier staat de code geschreven in R
-- `bronnen` - deze map is voor de gebruikte bronnen 
-- `figuren` - Alle gemaakte figuren staan hierin
-- `databeheer` - Deze is voor meer uitleg over deze github pagina
-
+- `Bronnen` - deze map is voor de gebruikte bronnen 
+- `Figuren` - Alle gemaakte figuren staan hierin
 ---
 
 ## Introductie
