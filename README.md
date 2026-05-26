@@ -1,17 +1,10 @@
 <p align="center">
-  <img src="assets/Logo_SpellMetrics.png" alt="Wizarding Spell Metrics Logo" width="600"/>
+  <img src="assets/Logo_SpellMetrics.png" alt="Image hier??" width="600"/>
 </p>
 
 
-# Casus Transcriptomics
+# Moe Betere Titel hebe hier
 
-Welkom in **Wizarding Spell Metrics**, waar de data nep is, maar de structuur *verrassend oké* is. Deze repo is gemaakt om te laten zie hoe je een bio-informatica project structureert in GitHub met behulp van een onzin dataset. files mogen gedownload en hergebruikt worden (zoals [deze README.md file](README.md)). Vraag ook gerust AI voor tips!
-
-Perfect voor:
-- Wegwijs worden in GitHub
-- Het leren structureren van data
-
-> `kaas is lekker`
 
 ## 📁 Inhoud/structuur
 
@@ -24,7 +17,11 @@ Perfect voor:
 ---
 
 ## Introductie
+Reumatoide artritis, ook bekend als reuma, is een autoimuunziekte. Mensen die last hebben van reuma krijgen ontstekingen in hun gewrichten, hoeveel last men daarvan heeft wisselt. Op moment is er nog geen medicijn om reuma volledig te genezen, maar het kan wel geremd worden. Reuma komt vaker voor bij vrouwen dan bij mannen, leeftijd maakt voor reuma niet veel uit. [(UMC Utrecht, n.d.)](Bronnen/UMC_Utrecht_reumatoide_artritis)
 
+Om er achter te komen of iemand reuma heeft kan je kijken naar ACPA (Anti-Citrullinated Protein Antibodies). ACPA zijn antistoffen tegen het eiwit CCP die in het bloed gevonden kunnen worden bij mensen met reumatoïde artritis. Wanneer iemand een positieve ACPA-test heeft in combinatie met gewrichtsontstekingen, is de kans groot dat die persoon reuma heeft. Toch heeft niet iedere reumapatiënt ACPA in het bloed. De antistoffen kunnen soms al jaren aanwezig zijn voordat de eerste klachten ontstaan. Mensen die reuma hebben zonder ACPA kunnen vaker stoppen met medicatie zonder dat gewrichtsklachten terug komen dan mensen die wel ACPA hebben. [(Reuma Magazine, 2022)](Bronnen/Reuma_Magazine,(2022,February_4))
+
+Door te kijken naar sequencing data van reuma patiënten en dat te vergelijken met mensen zonder reuma is er te zien welke genen actiever of minder actief zijn. Met die informatie kan met verder onderzoek misschien meer worden gedaan om patiënten te helpen. 
 
 
 ## Methoden
