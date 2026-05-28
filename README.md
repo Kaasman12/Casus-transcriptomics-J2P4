@@ -28,7 +28,7 @@ Voor de transcriptomics analyse is er eerst het menselijk genoom [(zie hier)](Br
 Om te zien welke genen omhoog of omlaag worden gereguleerd is er een GO analyse gedaan. Voordat de GO analyse werd gedaan zijn alle niet significante genen eruit gefilterd waardoor alleen de belangrijke en statistisch significante genen geanalyseerd werden. Daarna is met behulp van KEGG gekeken naar welke pathways daarbij horen.
 
 <p align="center">
-  <img src="figuren/Flowchart.png" alt="Flow" width="600"/>
+  <img src="figuren/Flowschema.png" alt="Flow" width="600"/>
   
   <em>Figuur 1: Flowchart van de uitgevoerde methode</em>
 </p>
