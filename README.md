@@ -33,7 +33,7 @@ Om te zien welke genen omhoog of omlaag worden gereguleerd is er een GO analyse 
 
 
 ## 📊 Resultaten
-De resultaten van de differential gene analysis staan in de [volcanoplot](Figuren/VolcanoplotWC.png). In deze grafiek staan de genen die verschillen tussen de onderzochte groepen. Op de horizontale as staat de log2 fold change, wat laat zien of een gen meer of minder tot expressie komt. Op de verticale as staat hoe significant het verschil is.
+De resultaten van de differential gene analysis staan in de [volcanoplot](figuren/VolcanoplotWC.png). In deze grafiek staan de genen die verschillen tussen de onderzochte groepen. Op de horizontale as staat de log2 fold change, wat laat zien of een gen meer of minder tot expressie komt. Op de verticale as staat hoe significant het verschil is.
 
 De rode punten geven genen aan die zowel een groot verschil in expressie als een significante p-waarde hebben. Enkele genen, zoals ANKRD30BL, MT-ND6 en SRGN, vallen sterk op omdat deze een groot verschil laten zien tussen de groepen en ook erg significant zijn. Dit kan betekenen dat deze genen mogelijk betrokken zijn bij processen die een rol spelen bij reumatoïde artritis. De groene punten laten genen zien met een verschil in expressie, maar met minder sterke statistische ondersteuning. De meeste genen bevinden zich rond het midden van de grafiek, wat aangeeft dat voor veel genen weinig verschil aanwezig is tussen de onderzochte groepen.
 
