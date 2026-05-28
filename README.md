@@ -13,7 +13,7 @@
 ---
 
 ## Introductie
-Reumatoide artritis, ook bekend als reuma, is een auto-imuunziekte. Mensen die last hebben van reuma krijgen ontstekingen in hun gewrichten, hoeveel last men daarvan heeft wisselt. Op moment is er nog geen medicijn om reuma volledig te genezen, maar het kan wel geremd worden. Reuma komt vaker voor bij vrouwen dan bij mannen, leeftijd maakt voor reuma niet veel uit. [(UMC Utrecht, n.d.)](Bronnen/UMC_Utrecht_reumatoide_artritis.url)
+Reumatoide artritis, ook bekend als reuma, is een auto-imuunziekte. Mensen die last hebben van reuma krijgen ontstekingen in de gewrichten. De ervaren klachten zijn wisselend. Op dit moment is er nog geen medicijn om reuma volledig te genezen, maar het kan wel geremd worden. Reuma komt vaker voor bij vrouwen dan bij mannen, leeftijd maakt voor reuma niet veel uit. [(UMC Utrecht, n.d.)](Bronnen/UMC_Utrecht_reumatoide_artritis.url)
 
 Om er achter te komen of iemand reuma heeft kan je kijken naar ACPA (Anti-Citrullinated Protein Antibodies). ACPA zijn antistoffen tegen het eiwit CCP die in het bloed gevonden kunnen worden bij mensen met reumatoïde artritis. Wanneer iemand een positieve ACPA-test heeft in combinatie met gewrichtsontstekingen, is de kans groot dat die persoon reuma heeft. Toch heeft niet iedere reumapatiënt ACPA in het bloed. De antistoffen kunnen soms al jaren aanwezig zijn voordat de eerste klachten ontstaan. Mensen die reuma hebben zonder ACPA kunnen vaker stoppen met medicatie zonder dat gewrichtsklachten terug komen dan mensen die wel ACPA hebben. [(Reuma Magazine, 2022)](Bronnen/Reuma_Magazine,2022,February_4.url)
 
@@ -23,10 +23,15 @@ Door te kijken naar sequencing data van reuma patiënten en dat te vergelijken m
 ## Methoden
 Er zijn 4 monsters van patiënten met reuma en data van 4 patiënten zonder reuma gesequenced. Deze monsters zijn genomen uit gewrichtslijmvlies doormiddel van een synoviumbiopt. De patiënten zijn meer dan een jaar voordat het monster werd genomen positief getest op ACPA. Om deze sequencing data te analyseren is er met behulp van de codetaal R een transcriptomics analyse en ook een gene ontology (GO) analyse uitgevoerd. 
 
-Voor de transcriptomics analyse is er eerst het menselijk genoom [(zie hier)](Bronnen/menselijk_genoom.url) geïndexeerd voor gebruik als referentiegenoom met de package Rsubread. Daarna werden alle monsters gemapt tegen het referentiegenoom, hierbij is voor elk monster een .BAM bestand aangemaakt [.BAM_bestanden](Verwerkte_data/.BAM_bestanden). Er is ook een differential gene analyse gedaan met DESec2, hiermee is bekeken of de verschillen in aantal reads wel of niet statistisch significant is. Het aantal reads van elk gen zijn geteld en in een count matrix gezet om makkelijk te zien welke genen het meest actief zijn.
+Voor de transcriptomics analyse is er eerst het menselijk genoom [(zie hier)](Bronnen/menselijk_genoom.url) geïndexeerd voor gebruik als referentiegenoom met de package Rsubread (ver. 2.24.0). Daarna werden alle monsters gemapt tegen het referentiegenoom, hierbij is voor elk monster een .BAM bestand aangemaakt [.BAM_bestanden](Verwerkte_data/.BAM_bestanden). Er is ook een differential gene analyse gedaan met DESec2 (ver. 1.50.2), hiermee is bekeken of de verschillen in aantal reads wel of niet statistisch significant is. Het aantal reads van elk gen zijn geteld en in een count matrix gezet om makkelijk te zien welke genen het meest actief zijn.
 
 Om te zien welke genen omhoog of omlaag worden gereguleerd is er een GO analyse gedaan. Voordat de GO analyse werd gedaan zijn alle niet significante genen eruit gefilterd waardoor alleen de belangrijke en statistisch significante genen geanalyseerd werden. Daarna is met behulp van KEGG gekeken naar welke pathways daarbij horen.
 
+<p align="center">
+  <img src="figuren/Flowchart.png" alt="Flow" width="600"/>
+  
+  <em>Figuur 1: Flowchart van de uitgevoerde methode</em>
+</p>
 
 ## 📊 Resultaten
 De resultaten van de differential gene analysis staan in de [volcanoplot](figuren/VolcanoplotWC.png). In deze grafiek staan de genen die verschillen tussen de onderzochte groepen. Op de horizontale as staat de log2 fold change, wat laat zien of een gen meer of minder tot expressie komt. Op de verticale as staat hoe significant het verschil is.
