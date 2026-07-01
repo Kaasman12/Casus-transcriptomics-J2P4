@@ -28,10 +28,10 @@ align.RA2 <- align(index = "ref_man", readfile1 = "SRR4785980_1_subset40k.FASTQ"
 align.RA3 <- align(index = "ref_man", readfile1 = "SRR4785986_1_subset40k.FASTQ", readfile2 = "SRR4785986_2_subset40k.FASTQ", output_file = "RA3.BAM")
 align.RA4 <- align(index = "ref_man", readfile1 = "SRR4785988_1_subset40k.FASTQ", readfile2 = "SRR4785988_2_subset40k.FASTQ", output_file = "RA4.BAM")
 
-
+# alle monsters bij elkaar stoppen zodat ze in een keer in de count matrix kunnen
 allsamples <- c("Norm1.BAM", "Norm2.BAM", "Norm3.BAM", "Norm4.BAM", "RA1.BAM", "RA2.BAM", "RA3.BAM", "RA4.BAM" )
 
-
+# kleine count matrix maken
 count_matrix <- featureCounts(
   files = allsamples,
   annot.ext = "genomic.gtf",
@@ -41,7 +41,7 @@ count_matrix <- featureCounts(
   GTF.attrType = "gene_id",
   useMetaFeatures = TRUE
 )
-
+# controlleren of de count matrix gelukt is
 str(count_matrix)
 
 
@@ -52,6 +52,7 @@ counts <- read.delim(
 )
 head(counts)
 
+#treatment table maken
 treatment <- c("niks", "niks", "niks", "niks", "reuma", "reuma", "reuma", "reuma")
 treatment_table <- data.frame(treatment)
 
@@ -91,7 +92,7 @@ dev.off()
 
 
 
-#Go analyse voorberieding gedoe:
+#Go analyse voorbereiding
 library(clusterProfiler)
 library(org.Hs.eg.db)
 library(enrichplot)
@@ -120,7 +121,7 @@ head(gene_list)
 library(clusterProfiler)
 library(enrichplot)
 
-#GO gedoe
+#GO analyse
 ego <- enrichGO(
   gene = gene_df$ENTREZID,
   OrgDb = org.Hs.eg.db,
@@ -136,7 +137,7 @@ ego@result
 dotplot(ego)
 barplot(ego)
 
-#kegg gedoe
+#kegg pathway analyse
 kk <- enrichKEGG(
   gene = gene_df$ENTREZID,
   organism = "hsa",
@@ -145,7 +146,7 @@ kk <- enrichKEGG(
 
 dotplot(kk)
 
-#pathview gedoe
+#pathview
 foldchanges <- sig_genes$log2FoldChange
 
 names(foldchanges) <- rownames(sig_genes)
@@ -156,15 +157,10 @@ names(fc_mapped) <- gene_df$ENTREZID
 
 head(fc_mapped)
 
-pathview(
-  gene.data = fc_mapped,
-  pathway.id = "hsa05323", #Reumatoide artritis
-  species = "hsa",
-  gene.idtype = "ENTREZ"
-)
-
+# kijken welke pathway het meest significant is
 kk@result$ID[1]
 
+#pathway van hsa04621 maken
 pathview(
   gene.data = fc_mapped,
   pathway.id = "hsa04621", #NOD-like receptor signaling pathway
