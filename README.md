@@ -48,17 +48,25 @@ Enkele genen, zoals ANKRD30BL, MT-ND6 en SRGN, vallen sterk op in de [volcanoplo
   <img src="figuren/VolcanoplotWC.png" width="400"/>
 </p>
 
-<sub>Figuur 2: volcanoplot
+<sub>Figuur 2: In deze volcanoplot staan de genen die verschillen tussen de onderzochte groepen. Op de horizontale as staat de log2 fold change en op de verticale as staat hoe significant het verschil is. De rode punten geven genen aan die zowel een groot verschil in expressie als een significante p-waarde hebben. De groene punten laten genen zien met een verschil in expressie, maar met minder sterke statistische ondersteuning. De punten in het midden hebben geen significant verschil.
 
 GO analyse:
 Uit de GO analyse vallen vooral de MAPK signaling pathway, Epstein-Barr virus infection en NOD like receptor signaling pathway op. Deze drie staan het hoogst in de [dotplot (figuur 3)](figuren/dotplotGO.png) wat betekend dat ze de hoogst gene ratio’s hebben. De MAPK signaling pathway heeft de hoogste gene ratio maar is minder significant dan de NOD like receptor signaling pathway. (figuur 3)
 
-Figuur 3
+<p align="center">
+  <img src="figuren/dotplotGO.png" width="400"/>
+</p>
+
+<sub>Figuur 3: Dotplot uit de GO analyse, De grootte van de punten geeft aan hoeveel genen betrokken zijn bij een pathway, terwijl de kleur de significantie van het resultaat weergeeft.
 
 Pathway analyse:
 Uit de pathway analyse van de NOD like receptor signaling pathway [(hsa04621)]( figuren/hsa04621.pathview.png) met de KEGG database is gekomen dat de pro-inflammatory effects bij patiënten met reuma hoger zijn dan normaal. (figuur 4) Ook wordt er een hogere expressie in pro-inflammatory cytokines waargenomen. Deze twee verschillen hebben allebei iets te maken met ontstekingsreacties die ook veel voorkomen bij reuma.
 
-Figuur 4
+<p align="center">
+  <img src="figuren/hsa04621.pathview.png" width="400"/>
+</p>
+
+<sub>Figuur 4: Pathway van de NOD-like receptors uit de pathway analyse met KEGG (hsa04621), rood is up-regulated en groen is down-regulated.
 
 
 ## Conclusie
