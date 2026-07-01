@@ -45,10 +45,10 @@ Er is een deseq analyse uitgevoerd op de sequencing data van de synovium monster
 Enkele genen, zoals ANKRD30BL, MT-ND6 en SRGN, vallen sterk op in de [volcanoplot (figuur 2)](figuren/VolcanoplotWC.png), omdat deze een groot verschil laten zien tussen de groepen en ook erg significant zijn. Dit kan betekenen dat deze genen mogelijk betrokken zijn bij processen die een rol spelen bij reumatoïde artritis.
 
 <p align="center">
-  <img src="figuren/VolcanoplotWC.png" width="800"/>
-  
-  <em>Figuur 2: Volcanoplot</em>
+  <img src="figuren/VolcanoplotWC.png" width="400"/>
 </p>
+
+<sub>Figuur 2: volcanoplot
 
 GO analyse:
 Uit de GO analyse vallen vooral de MAPK signaling pathway, Epstein-Barr virus infection en NOD like receptor signaling pathway op. Deze drie staan het hoogst in de [dotplot (figuur 3)](figuren/dotplotGO.png) wat betekend dat ze de hoogst gene ratio’s hebben. De MAPK signaling pathway heeft de hoogste gene ratio maar is minder significant dan de NOD like receptor signaling pathway. (figuur 3)
