@@ -14,9 +14,9 @@
 
 ## Introductie
 
-Reumatoide artritis, ook bekend als reuma, is een auto-imuunziekte. Mensen die last hebben van reuma krijgen ontstekingen in de gewrichten. Op dit moment is er nog geen medicijn om reuma volledig te genezen, maar het kan wel geremd worden. [(UMC Utrecht, n.d.)](Bronnen/UMC_Utrecht_reumatoide_artritis.url) In 2024 waren er in nederland bij schatting van het RIVM 282.800 mensen met reuma Reuma komt vaker voor bij vrouwen dan bij mannen, en bij ouderen komt de ziekte vaker voor. [(RIVM, n.d.)]( https://www.vzinfo.nl/reumatoide-artritis-ra/leeftijd-en-geslacht)
+Reumatoide artritis, ook bekend als reuma, is een auto-imuunziekte. Mensen die last hebben van reuma krijgen ontstekingen in de gewrichten. Op dit moment is er nog geen medicijn om reuma volledig te genezen, maar het kan wel geremd worden. [(UMC Utrecht, n.d.)](https://www.umcutrecht.nl/nl/ziekte/reumatoide-artritis) In 2024 waren er in nederland bij schatting van het RIVM 282.800 mensen met reuma Reuma komt vaker voor bij vrouwen dan bij mannen, en bij ouderen komt de ziekte vaker voor. [(RIVM, n.d.)]( https://www.vzinfo.nl/reumatoide-artritis-ra/leeftijd-en-geslacht)
 
-Om er achter te komen of iemand reuma heeft kan je kijken naar ACPA (Anti-Citrullinated Protein Antibodies). ACPA zijn antistoffen tegen het eiwit CCP die in het bloed gevonden kunnen worden bij mensen met reumatoïde artritis. Wanneer iemand een positieve ACPA-test heeft in combinatie met gewrichtsontstekingen, is de kans groot dat die persoon reuma heeft. [(Reuma Magazine, 2022)](Bronnen/Reuma_Magazine,2022,February_4.url) 
+Om er achter te komen of iemand reuma heeft kan je kijken naar ACPA (Anti-Citrullinated Protein Antibodies). ACPA zijn antistoffen tegen het eiwit CCP die in het bloed gevonden kunnen worden bij mensen met reumatoïde artritis. Wanneer iemand een positieve ACPA-test heeft in combinatie met gewrichtsontstekingen, is de kans groot dat die persoon reuma heeft. [(Reuma Magazine, 2022)](https://reumamagazine.nl/reuma-van-a-z/acpa/) 
 
 Er is al bekend dat bij reuma genexpressie kan verschillen van een gezond persoon. Er is bijvoorbeeld gevonden dat veel genen die te maken hebben met actine filamenten andere expressie tonen bij vroege reuma. [Platzer et al. (2019)]( https://pmc.ncbi.nlm.nih.gov/articles/PMC6657850/#sec001)
 
@@ -29,9 +29,9 @@ Voor dit onderzoek zijn de volgende deelvragen opgesteld.
 ## Methoden
 Voor dit onderzoek zijn RNA-sequencinggegevens gebruikt van vier patiënten met reuma en vier controlepatiënten zonder reuma. De monsters zijn verkregen uit gewrichtsslijmvlies door middel van een synoviumbiopt. De patiënten met reuma waren meer dan één jaar vóór afname van het biopt positief getest op ACPA. De gebruikte dataset is afkomstig uit [Platzer et al. (2019)]( https://pmc.ncbi.nlm.nih.gov/articles/PMC6657850/#sec001) en de sequencing is uitgevoerd met een Illumina-sequencer.
 
-De transcriptomicsanalyse is uitgevoerd in R. Het menselijke referentiegenoom [(zie hier)](Bronnen/menselijk_genoom.url) is geïndexeerd met de package Rsubread (versie 2.24.0; Liao et al. (2019)). Vervolgens zijn alle monsters gemapt tegen het referentiegenoom, waarbij per monster een BAM-bestand is gegenereerd [.BAM_bestanden](Verwerkte_data/.BAM_bestanden). Het aantal reads per gen is bepaald en samengevoegd in een countmatrix. Differentiale genexpressie is geanalyseerd met DESeq2 (versie 1.50.2; Love et al. (2014)). Genen met een aangepaste p-waarde < 0,05 zijn als significant beschouwd.
+De transcriptomicsanalyse is uitgevoerd in R. Het menselijke referentiegenoom [(zie hier)](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/) is geïndexeerd met de package Rsubread (versie 2.24.0; [Liao et al. (2019)](https://www.bioconductor.org/packages//release/bioc/html/Rsubread.html)). Vervolgens zijn alle monsters gemapt tegen het referentiegenoom, waarbij per monster een BAM-bestand is gegenereerd [.BAM_bestanden](Verwerkte_data/.BAM_bestanden). Het aantal reads per gen is bepaald en samengevoegd in een countmatrix. Differentiale genexpressie is geanalyseerd met DESeq2 (versie 1.50.2; [Love et al. (2014)](https://link.springer.com/article/10.1186/s13059-014-0550-8)). Genen met een aangepaste p-waarde < 0,05 zijn als significant beschouwd.
 
-De significante genen zijn gebruikt voor een Gene Ontology (GO)-analyse om biologische processen te identificeren die verschillen tussen beide groepen. Daarnaast is met KEGG onderzocht welke pathways verrijkt waren. Het volledige R-script met de gebruikte analyse is opgenomen in het mapje [Code], zodat de analyse reproduceerbaar is en de methode is ook te zien in [figuur 1](verwijs naar flowschema + zet in tekst misschien).
+De significante genen zijn gebruikt voor een Gene Ontology (GO)-analyse om biologische processen te identificeren die verschillen tussen beide groepen. Daarnaast is met KEGG onderzocht welke pathways verrijkt waren. Het volledige R-script met de gebruikte analyse is opgenomen in het mapje [Code], zodat de analyse reproduceerbaar is en de methode is ook te zien in (figuur 1).
 
 <p align="center">
   <img src="figuren/Flowschema.png" alt="Flow" width="600"/>
@@ -63,7 +63,7 @@ Pathway analyse:
 Uit de pathway analyse van de NOD like receptor signaling pathway [(hsa04621)]( figuren/hsa04621.pathview.png) met de KEGG database is gekomen dat de pro-inflammatory effects bij patiënten met reuma hoger zijn dan normaal. (figuur 4) Ook wordt er een hogere expressie in pro-inflammatory cytokines waargenomen. Deze twee verschillen hebben allebei iets te maken met ontstekingsreacties die ook veel voorkomen bij reuma.
 
 <p align="center">
-  <img src="figuren/hsa04621.pathview.png" width="400"/>
+  <img src="figuren/hsa04621.pathview.png" width="600"/>
 </p>
 
 <sub>Figuur 4: Pathway van de NOD-like receptors uit de pathway analyse met KEGG (hsa04621), rood is up-regulated en groen is down-regulated.
