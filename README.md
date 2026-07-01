@@ -44,7 +44,11 @@ DESeq analyse:
 Er is een deseq analyse uitgevoerd op de sequencing data van de synovium monsters, hieruit is een volcanoplot gekomen. 
 Enkele genen, zoals ANKRD30BL, MT-ND6 en SRGN, vallen sterk op in de [volcanoplot (figuur 2)](figuren/VolcanoplotWC.png), omdat deze een groot verschil laten zien tussen de groepen en ook erg significant zijn. Dit kan betekenen dat deze genen mogelijk betrokken zijn bij processen die een rol spelen bij reumatoïde artritis.
 
-Figuur 2
+<p align="center">
+  <img src="figuren/VolcanoplotWC.png" width="800"/>
+  
+  <em>Figuur 2: Volcanoplot</em>
+</p>
 
 GO analyse:
 Uit de GO analyse vallen vooral de MAPK signaling pathway, Epstein-Barr virus infection en NOD like receptor signaling pathway op. Deze drie staan het hoogst in de [dotplot (figuur 3)](figuren/dotplotGO.png) wat betekend dat ze de hoogst gene ratio’s hebben. De MAPK signaling pathway heeft de hoogste gene ratio maar is minder significant dan de NOD like receptor signaling pathway. (figuur 3)
@@ -59,6 +63,8 @@ Figuur 4
 
 ## Conclusie
 In dit onderzoek werd onderzocht welke genen en genetische pathways zijn betrokken bij reumatoïde artritis. Op basis van de uitgevoerde transcriptomics en pathwayanalyses kan worden geconcludeerd dat de genexpressie in het gewrichtsslijmvlies van patiënten met reumatoïde artritis verschilt van die van gezonde controles.
+
 Uit de differentiële genexpressieanalyse bleek dat onder andere ANKRD30BL, MT-ND6 en SRGN significant anders tot expressie komen bij patiënten met reuma. Deze genen kunnen daarom betrokken zijn bij de ziekte of de ontstekingsprocessen die daarbij optreden. Daarnaast liet de GO-analyse zien dat vooral de MAPK signaling pathway, NOD-like receptor signaling pathway en Epstein–Barr virus infection pathway verrijkt zijn. De KEGG-pathwayanalyse van de NOD-like receptor signaling pathway toonde bovendien een verhoogde expressie van genen die betrokken zijn bij pro-inflammatoire effecten en de productie van pro-inflammatoire cytokinen. Dit kan betekenen dat NOD-like receptors een belangrijke rol spelen bij de ontstekingen van reuma.
+
 Hoewel dit onderzoek aanwijzingen geeft voor genen en pathways die betrokken zijn bij reumatoïde artritis, zijn de resultaten gebaseerd op een kleine onderzoeksgroep van vier patiënten en vier gezonde controles. Hierdoor moeten de resultaten voorzichtig worden geïnterpreteerd. Vervolgonderzoek met een grotere steekproef is nodig om de gevonden verschillen te bevestigen en de rol van deze genen en pathways verder te onderzoeken.
 
