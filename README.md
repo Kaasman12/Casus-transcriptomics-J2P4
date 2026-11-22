@@ -31,12 +31,12 @@ Voor dit onderzoek zijn RNA-sequencinggegevens gebruikt van vier patiënten met 
 
 De transcriptomicsanalyse is uitgevoerd in R. Het menselijke referentiegenoom [(zie hier)](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/) is geïndexeerd met de package Rsubread (versie 2.24.0; [Liao et al. (2019)](https://www.bioconductor.org/packages//release/bioc/html/Rsubread.html)). Vervolgens zijn alle monsters gemapt tegen het referentiegenoom, waarbij per monster een BAM-bestand is gegenereerd [.BAM_bestanden](Verwerkte_data/.BAM_bestanden). Het aantal reads per gen is bepaald en samengevoegd in een countmatrix. Differentiale genexpressie is geanalyseerd met DESeq2 (versie 1.50.2; [Love et al. (2014)](https://link.springer.com/article/10.1186/s13059-014-0550-8)). Genen met een aangepaste p-waarde < 0,05 zijn als significant beschouwd.
 
-De significante genen zijn gebruikt voor een Gene Ontology (GO)-analyse om biologische processen te identificeren die verschillen tussen beide groepen. Daarnaast is met KEGG onderzocht welke pathways verrijkt waren. Het volledige R-script met de gebruikte analyse is opgenomen in het mapje [Code], zodat de analyse reproduceerbaar is en de methode is ook te zien in (figuur 1).
+De significante genen zijn gebruikt voor een Gene Ontology (GO)-analyse [(Ashburner et al., 2000)](https://pmc.ncbi.nlm.nih.gov/articles/PMC3037419/) om biologische processen te identificeren die verschillen tussen beide groepen. Daarnaast is met KEGG [(Kanehisa & Goto, 2000)](https://academic.oup.com/nar/article/28/1/27/2384332) onderzocht welke pathways verrijkt waren. Het volledige R-script met de gebruikte analyse is opgenomen in het mapje [Code](Code), zodat de analyse reproduceerbaar is en de methode is ook te zien in (figuur 1).
 
 <p align="center">
   <img src="figuren/Flowschema.png" alt="Flow" width="600"/>
   
-  <em>Figuur 1: Flowchart van de uitgevoerde methode</em>
+  <em>Figuur 1: Flowchart van de uitgevoerde methode voor de transcriptomics analyse van synovium monsters van reuma patiënten</em>
 </p>
 
 ## 📊 Resultaten
@@ -51,7 +51,7 @@ Enkele genen, zoals ANKRD30BL, MT-ND6 en SRGN, vallen sterk op in de [volcanoplo
 <sub>Figuur 2: In deze volcanoplot staan de genen die verschillen tussen de onderzochte groepen. Op de horizontale as staat de log2 fold change en op de verticale as staat hoe significant het verschil is. De rode punten geven genen aan die zowel een groot verschil in expressie als een significante p-waarde hebben. De groene punten laten genen zien met een verschil in expressie, maar met minder sterke statistische ondersteuning. De punten in het midden hebben geen significant verschil.
 
 GO analyse:
-Uit de GO analyse vallen vooral de MAPK signaling pathway, Epstein-Barr virus infection en NOD like receptor signaling pathway op. Deze drie staan het hoogst in de [dotplot (figuur 3)](figuren/dotplotGO.png) wat betekend dat ze de hoogst gene ratio’s hebben. De MAPK signaling pathway heeft de hoogste gene ratio maar is minder significant dan de NOD like receptor signaling pathway. (figuur 3)
+Er is een gene ontology (GO) analyse om te identificeren welke processen verschillen met elkaar. Uit de GO analyse vallen vooral de MAPK signaling pathway, Epstein-Barr virus infection en NOD like receptor signaling pathway op. Deze drie staan het hoogst in de [dotplot (figuur 3)](figuren/dotplotGO.png) wat betekend dat ze de hoogst gene ratio’s hebben. De MAPK signaling pathway heeft de hoogste gene ratio maar is minder significant dan de NOD like receptor signaling pathway. (figuur 3)
 
 <p align="center">
   <img src="figuren/dotplotGO.png" width="400"/>
@@ -60,7 +60,7 @@ Uit de GO analyse vallen vooral de MAPK signaling pathway, Epstein-Barr virus in
 <sub>Figuur 3: Dotplot uit de GO analyse, De grootte van de punten geeft aan hoeveel genen betrokken zijn bij een pathway, terwijl de kleur de significantie van het resultaat weergeeft.
 
 Pathway analyse:
-Uit de pathway analyse van de NOD like receptor signaling pathway [(hsa04621)]( figuren/hsa04621.pathview.png) met de KEGG database is gekomen dat de pro-inflammatory effects bij patiënten met reuma hoger zijn dan normaal. (figuur 4) Ook wordt er een hogere expressie in pro-inflammatory cytokines waargenomen. Deze twee verschillen hebben allebei iets te maken met ontstekingsreacties die ook veel voorkomen bij reuma.
+er zijn pathways geanalyseerd met de KEGG database om erachter te komen welke pathways actief zijn bij reuma. Uit de pathway analyse van de NOD like receptor signaling pathway [(hsa04621)]( figuren/hsa04621.pathview.png) met de KEGG database is gekomen dat de pro-inflammatory effects bij patiënten met reuma hoger zijn dan normaal. (figuur 4) Ook wordt er een hogere expressie in pro-inflammatory cytokines waargenomen. Deze twee verschillen hebben allebei iets te maken met ontstekingsreacties die ook veel voorkomen bij reuma.
 
 <p align="center">
   <img src="figuren/hsa04621.pathview.png" width="600"/>
